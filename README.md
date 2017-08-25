@@ -2,7 +2,8 @@
 
 transaction request library for zarinpal
 
-##laravel ready
+## laravel ready
+
 this package is going to work with all kinds of projects, but for laravel i add provider to make it as easy as possible.
 just add :
 ```php
@@ -22,8 +23,10 @@ Zarinpal::verify('OK',1000,$answer['Authority']);
 ```
 
 
-##usage
-###installation 
+## usage
+
+### installation 
+
 ``composer require zarinpal/zarinpal``
 or
 ```json
@@ -34,7 +37,8 @@ or
 },
 ```
 
-###request
+### request
+
 ```php
 use Zarinpal\Drivers\Soap;
 use Zarinpal\Zarinpal;
@@ -49,7 +53,8 @@ if(isset($answer['Authority'])) {
 //$answer['Authority'] must save somewhere to do the verification  
 ```
 
-###verify
+### verify
+
 ```php
 use Zarinpal\Drivers\Soap;
 use Zarinpal\Zarinpal;
@@ -59,7 +64,8 @@ $answer['Authority'] = file_get_contents('Authority');
 echo json_encode($test->verify('OK',1000,$answer['Authority']));
 //'Status'(index) going to be 'success', 'error' or 'canceled'
 ```
-##change driver
+## change driver
+
 driver can be changed between restAPI , soap and NuSoap with using:
 
 restAPI (recommended):
